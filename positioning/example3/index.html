@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Static, Relative, and Absolute Positioning</title>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+	<h1>In this example we will explore the different ways to center elements on the screen.</h1>
+    <div>
+        <h4>This paragraph is being centered by using a set width and margin:0 auto. The 0, for top and bottom margin, can be changed as needed.</h4>
+        <p style="margin:0 auto; width:150px;">Just some text</p>
+    </div>
+    <div>
+        <h4>This image cannot be centered the same way as the paragraph and thus margin:0 auto doesn't work because the image is an inline element.</h4>
+        <img src="http://www.thinkful.com/static/images/logo-200x41.png" width="100" style="margin:0 auto;">
+    </div>
+        
+        
+    <div style="text-align:center;">
+        <h4>Here we are trying to center the paragraph using text-align:center on the parent. It isn't working because the parent is a block element.</h4>
+        <p style="width:150px;">Just some text</p>
+    </div>
+    <div style="text-align:center;">
+        <h4>The img is being centered when the parent has text-align:center because the img is an inline element.</h4>
+        <img src="http://www.thinkful.com/static/images/logo-200x41.png"width="100" >
+    </div>
+        
+        
+    <div style="text-align:center;">
+        <h4>Here we set the paragraph to an inline element and now the text-align:center works.</h4>
+        <p style="width:150px; display:inline;">Just some text</p>
+    </div>
+    <div>
+        <h4>Here we set the img to a display:block element and so margin:0 auto works.</h4>
+        <img src="http://www.thinkful.com/static/images/logo-200x41.png" width="100" style="display:block; margin:0 auto;">
+    </div>
+</body>
+
+</html>

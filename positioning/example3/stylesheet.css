@@ -1,0 +1,17 @@
+*{
+    margin:5px;
+    padding:0;
+}
+h1{
+	width:800px;
+	margin:0 auto;
+	text-align:center;
+}
+div, p, img{
+    border: 1px solid black;
+}
+div{
+    width:300px;
+    border: 1px solid black;
+    margin:0 auto 10px;
+}
