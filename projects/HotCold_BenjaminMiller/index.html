@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Golf - Hot Cold</title>
+	<style>
+		#frame{
+			text-align: center;
+			margin: 1.3em auto;
+			font-family: arial;
+			font-size: 100%;
+		}
+		#status{
+			height: 5.5em;
+			width: 5.5em;
+			border-radius: 100%;
+			background-color: #333;
+			margin: 0 auto;
+			color: #fff;
+			text-transform: uppercase;
+			font-size: 2em;
+			line-height: 5.5em;
+			border: solid 2px #333;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		input[type=text]{
+			display: block;
+			width: 100%;
+			max-width: 13.75em;
+			padding: .5em;
+			margin: 1em auto .25em auto;
+			font-size: 1em;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		input[type=button]{
+			text-align: center;
+			padding: .5em 0;
+			width: 8.28em;
+			text-transform: uppercase;
+		}
+	</style>
+	<script src="script.js"></script>
+</head>
+<body>
+	<div id="frame">
+		<div id="status">...</div>
+		<input type="text" id="guess" placeholder="Guess a number" >
+		<input type="button" id="submit" value="guess" >
+		<input type="button" id="reset" value="reset">
+	</div>
+</body>
+</html>
