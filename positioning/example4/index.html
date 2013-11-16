@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<head>
+    <title>Positioning Examples</title>
+
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            font:62.5%/1.4 Arial,Verdana,Tahoma,sans-serif;
+            }
+        #ruler{
+            position:relative;
+            width:550px;
+            height:2px;
+            background:#000;
+            margin:0 0 30px;
+        }
+        .unit{
+            display:inline-block;
+            width:2px;
+            height:4px;
+            background:#000;
+            position:absolute;
+        }
+        #u50,#u100,#u150,#u200,#u250,#u300,#u350,#u400,#u450,#u500{
+            position:relative;
+            top:1px;
+        }
+        #container{
+            width:855px;
+            height:1000px;
+            overflow:auto;
+        }
+        #colLeft{
+            float: left;
+            width: 550px;
+        }
+        #colRight{
+            float: right;
+            width: 271px;
+            height: 100%;
+            padding-left:12px;
+            border: 1px solid #ccc;
+        }
+        .box{
+            border:1px solid #000;
+            width:50px;
+            height:50px;
+            background:#888;
+            float:left;
+            margin-bottom:50px;
+        }
+
+        #box2{
+            position:relative;
+            left:50px;
+        }
+        #box3{
+            position:relative;
+        }
+        #box4{
+            width:20px;
+            height:20px;
+            background: #ccc;
+        }
+        #box5{
+           position:absolute;
+            left:200px;
+            top:400px;
+        }
+        #box6{
+            position:fixed;
+            left:0px;
+            top:450px;
+        }
+        .inner{
+            position:absolute;
+            top:10px;
+            left:10px;
+        }
+        .description{
+            float:left;
+            padding-left:60px;
+            width:400px;
+        }
+        .descriptionOffset{
+            float:left;
+            padding-left:110px;
+            width:400px;
+        }
+        .fixedDescription{
+            position: fixed;
+            top:450px;
+            left:110px;
+            width:400px;
+        }
+        .clearfix{
+            clear:both;
+        }
+        .cssSelector{
+            color:blue;
+        }
+        .cssRule{
+            color:green;
+        }
+        .cssNumber{
+            color:red;
+        }
+    </style>    
+</head>
+<body>
+    <div id="ruler">
+        <span id="u50" class="unit" style="left:50px">50</span>
+        <span id="u100" class="unit" style="left:96px">100</span>
+        <span id="u150" class="unit" style="left:140px">150</span>
+        <span id="u200" class="unit" style="left:186px">200</span>
+        <span id="u250" class="unit" style="left:236px">250</span>
+        <span id="u300" class="unit" style="left:300px">300</span>
+        <span id="u350" class="unit" style="left:350px">350</span>
+        <span id="u400" class="unit" style="left:400px">400</span>
+        <span id="u450" class="unit" style="left:450px">450</span>
+        <span id="u500" class="unit" style="left:500px">500</span>
+    </div>
+    <div id="container">
+        <div id="colLeft">
+            <div id="box1" class="box"></div>
+            <div class="description"><p>Default positioning - static - goes where it goes</p></div>
+
+            <div class="clearfix"></div>
+            <div id="box2" class="box"></div>
+            <div class="description"><p>Introducting relative positioning, the box is 'relative' to it's natural location on the page. We have placed it at (50, 0) - that is 50 pixels from the left and 0 pixels from the top.</p></div>
+
+            <div class="clearfix"></div>
+            <div id="box3" class="box outer">
+                <div id="box4" class="box inner"></div>
+            </div>
+            <div class="description"><p>Introducing a box absolutely inside another box, which itself is positioned relatively. Checkout the inner box. It is at position (10,10) inside the outer box.</p></div>
+            <div class="clearfix"></div>
+
+            <div id="box5" class="box outer"></div>
+            <div class="descriptionOffset"><p>Introducing a box that is absolutely positioned - in this case relative to the page. The box is at (200, 350) from the page origin.</p></div>
+
+            <div class="clearfix"></div>
+            <div id="box6" class="box"></div>
+            <div class="fixedDescription"><p>Introducing a box whose position is fixed - in this case relative to the page. The box is at (0, 400) from the page origin.</p></div>
+        </div>
+        <div id="colRight">
+            <p>box1{<br>&nbsp;&nbsp;&nbsp;<span class="cssSelector">border</span>:<span class="cssNumber">1</span>px <span class="cssRule">solid</span> <span class="cssNumber">#000</span>;<br>&nbsp;&nbsp;&nbsp;<span class="cssSelector">width</span>:<span class="cssNumber">50</span>px;<br>&nbsp;&nbsp;&nbsp;<span class="cssSelector">height</span>:<span class="cssNumber">50</span>px;<br>&nbsp;&nbsp;&nbsp;<span class="cssSelector">background</span>:<span class="cssNumber">#888</span>;<br>&nbsp;&nbsp;&nbsp;<span class="cssSelector">float</span>:<span class="cssRule">left</span>;<br>&nbsp;&nbsp;&nbsp;<span class="cssSelector">margin-bottom</span>:<span class="cssNumber">50</span>px;<br>}</p>
+
+            <p>box2{<br>&nbsp;&nbsp;&nbsp;<span class="cssSelector">position</span>:<span class="cssRule">relative</span>;<br>&nbsp;&nbsp;&nbsp;<span class="cssSelector">left</span>:<span class="cssNumber">50</span>px;<br>}</p>
+
+            <p>box3{<br>&nbsp;&nbsp;&nbsp;<span class="cssSelector">position</span>:<span class="cssRule">relative</span>;<br>}</p>
+
+            <p>box4{<br>&nbsp;&nbsp;&nbsp;<span class="cssSelector">width</span>:<span class="cssNumber">20</span>px;<br>&nbsp;&nbsp;&nbsp;<span class="cssSelector">height</span>:<span class="cssNumber">20</span>px;<br>&nbsp;&nbsp;&nbsp;<span class="cssSelector">background</span>:<span class="cssNumber">#CCC</span>;<br>}</p>
+ 
+            <p>box5{<br>&nbsp;&nbsp;&nbsp;<span class="cssSelector">position</span>:<span class="cssRule">absolute</span>;<br>&nbsp;&nbsp;&nbsp;<span class="cssSelector">left</span>:<span class="cssNumber">200</span>px;<br><span class="cssSelector">&nbsp;&nbsp;&nbsp;top</span>:<span class="cssNumber">400</span>px;<br>}</p>
+
+            <p>box6{<br>&nbsp;&nbsp;&nbsp;<span class="cssSelector">position</span>:<span class="cssRule">fixed</span>;<br>&nbsp;&nbsp;&nbsp;<span class="cssSelector">left</span>:<span class="cssNumber">0</span>px;<br><span class="cssSelector">&nbsp;&nbsp;&nbsp;top</span>:<span class="cssNumber">450</span>px;<br>}</p>
+      </div>
+
+    </div>  
+</body>
+<html>
