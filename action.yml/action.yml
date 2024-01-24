@@ -1,0 +1,11 @@
+name: 'My GitHub Action'
+description: 'Description of my GitHub Action'
+author: 'Your Name'
+inputs:
+  myInput:
+    description: 'An input for my action'
+    required: true
+    default: 'default value'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
